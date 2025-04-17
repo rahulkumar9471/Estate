@@ -1,35 +1,51 @@
 import React from 'react'
 import Card from '../../components/Card'
+import img from '../../assets/login.png'
+import FormInput from '../../components/FormInput'
+import FormButton from '../../components/FormButton'
+import PasswordInput from '../../components/PasswordInput'
+import FooterCompany from '../../components/FooterCompany'
+
 
 const Register = () => {
     return (
         <Card>
-
-
-
-            <form class="max-w-sm mx-auto">
-                <div class="mb-5">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                    <input type="email" id="email" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="name@flowbite.com" required />
+            <div className='flex'>
+                {/* Left side with image */}
+                <div className='w-1/2 flex items-center justify-center pr-4 p-6 bg-gradient-to-l from-neutral-950 to-blue-900'>
+                    <img src={img} alt="App background" className="w-xl  max-w-full h-auto" />
                 </div>
-                <div class="mb-5">
-                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                    <input type="password" id="password" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
-                </div>
-                <div class="mb-5">
-                    <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
-                    <input type="password" id="repeat-password" class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
-                </div>
-                <div class="flex items-start mb-5">
-                    <div class="flex items-center h-5">
-                        <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-                    </div>
-                    <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
-                </div>
-                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
-            </form>
 
-
+                {/* Right side with form and vertical divider */}
+                <div className='w-1/2 p-16 pl-11 items-center border-l justify-center border-gray-400 dark:border-gray-600'>
+                    <form className="max-w-sm mx-auto">
+                        <div className="mb-6">
+                            <h1 className="mb-2 text-white text-4xl font-bold dark:text-gray-300">Create an account</h1>
+                            <p className="mb-0 text-white text-md dark:text-gray-300">
+                                Already a member? <a href="sign-in.html" className="text-blue-500 hover:underline">Sign In</a>
+                            </p>
+                        </div>
+                        <div className="mb-5">
+                            <FormInput type="email" lable="Email Id" placeholder="Enter a valid email" />
+                        </div>
+                        <div className="mb-5">
+                            <PasswordInput label="New Password" placeholder="New Password" />
+                        </div>
+                        <div className="mb-5">
+                            <PasswordInput label="Confirm Password" placeholder="Confirm Password" />
+                        </div>
+                        <div className="flex items-start mb-5">
+                            <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 dark:bg-gray-700 dark:border-gray-600" required />
+                            <label htmlFor="terms" className="ml-2 text-sm text-white font-medium text-gray-900 dark:text-gray-300">
+                                I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>
+                            </label>
+                        </div>
+                        <FormButton type="submit" label="Sign Up" />
+                        <FooterCompany />
+                        
+                    </form>
+                </div>
+            </div>
         </Card>
     )
 }
