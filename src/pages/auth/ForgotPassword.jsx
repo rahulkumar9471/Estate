@@ -10,20 +10,20 @@ const ForgotPassword = () => {
         <Card>
             <div className='flex'>
                 {/* Left side with image */}
-                <div className='w-1/2 flex items-center justify-center pr-4'>
+                <div className='w-1/2 flex items-center justify-center pr-4 p-6 bg-gradient-to-l from-neutral-950 to-blue-900'>
                     <img src={img} alt="App background" className="w-xl  max-w-full h-auto" />
                 </div>
 
                 {/* Right side with form and vertical divider */}
-                <div className='w-1/2 pl-4 border-l border-gray-400 dark:border-gray-600'>
+                <div className='w-1/2 p-16 pl-11 pt-15 border-l border-neutral-900 dark:border-gray-600'>
                     <form className="max-w-sm mx-auto">
                         <div className="mb-6">
-                            <h1 className="mb-2 text-dark text-2xl font-bold dark:text-white">Forgot Password</h1>
-                            <p className="mb-0 text-dark text-xs dark:text-white">
+                            <h1 className="mb-2 text-white text-4xl font-bold dark:text-gray-300">Forgot Password</h1>
+                            <p className="mb-0 text-white text-sm dark:text-gray-300">
                                 Enter the email address associated with an account.</p>
                         </div>
 
-                        <div className="mb-5">
+                        <div className="mb-7">
                             <FormInput type="email" lable="Email Id" placeholder="Enter Registered Email" />
                         </div>
                         <FormButton type="submit" label="Sign In" />

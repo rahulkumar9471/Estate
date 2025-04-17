@@ -3,7 +3,7 @@ import React from 'react'
 const FormInput = ({ className, type , lable, placeholder}) => {
   return (
     <div>
-        <lable className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{lable}</lable>
+        <lable className="block mb-2 text-white text-sm font-medium text-gray-900 dark:text-gray-300">{lable}</lable>
         <input 
         type={type}
         placeholder={placeholder}

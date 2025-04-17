@@ -7,7 +7,7 @@ const PasswordInput = ({label, placeholder}) => {
 
   return (
     <div className="max-w-sm mx-auto">
-      <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      <label htmlFor="password" className="block text-white mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
         {label}
       </label>
       <div className="relative">
@@ -17,7 +17,7 @@ const PasswordInput = ({label, placeholder}) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder={placeholder}
-          className="py-2.5 sm:py-3 bg-gray-200 ps-4 pe-10 block w-full border border-dark-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+          className="py-2.5 sm:py-3  bg-gray-300 ps-4 pe-10 block w-full border border-dark-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
         />
         <button
           type="button"
